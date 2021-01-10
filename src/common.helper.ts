@@ -1,7 +1,7 @@
 export class CommonHelper {
 
   // eslint-disable-next-line @typescript-eslint/ban-types
-  public static isObject(item: unknown): item is object {
+  public static isObject(item: any): item is object {
     return item && typeof item === 'object' && !Array.isArray(item);
   }
 
