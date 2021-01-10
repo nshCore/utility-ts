@@ -1,0 +1,56 @@
+{
+  "plugins": [
+    ["@semantic-release/commit-analyzer", {
+      "preset": "angular",
+      "releaseRules": [
+        {"type": "build", "release": "patch"},
+        {"type": "chore", "release": "minor"},
+        {"type": "ci", "release": "patch"},
+        {"type": "docs", "scope":"README", "release": "patch"},
+        {"type": "feat", "release": "major"},
+        {"type": "fix", "release": "minor"},
+        {"type": "refactor", "release": "patch"},
+        {"type": "revert", "release": "patch"},
+        {"type": "style", "release": "patch"},
+        {"type": "test", "release": "patch"},
+        {"type": "sample", "release": "patch"}
+      ],
+      "parserOpts": {
+        "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES"]
+      }
+    }],
+    ["@semantic-release/release-notes-generator", {
+      "preset": "angular",
+      "parserOpts": {
+        "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES", "BREAKING"]
+      },
+      "writerOpts": {
+        "commitsSort": ["subject", "scope"]
+      }
+    }],
+    [
+      "@semantic-release/changelog",
+      {
+        "changelogFile": "CHANGELOG.md"
+      }
+    ],
+    [
+      "@semantic-release/npm", {
+      "pkgRoot": "dist"
+    }
+    ],
+    [
+      "@semantic-release/github", {
+      "assets": [
+        {"path": "dist/index.esm.min.js", "label": "esm minified module distribution"}
+      ]
+    }],
+    [
+      "@semantic-release/git",
+      {
+        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
+        "assets": ["CHANGELOG.md"]
+      }
+    ]
+  ]
+}
