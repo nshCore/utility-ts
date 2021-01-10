@@ -5,7 +5,7 @@ const configuration: Configuration = {
   input: 'src/index.ts',
   output: {
     format: ['es', 'cjs'],
-    moduleName: 'tss-oss-boiler',
+    moduleName: 'utility-ts',
     sourceMap: true
   },
   bundleNodeModules: true,

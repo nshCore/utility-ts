@@ -1,16 +1,16 @@
 {
-  "name": "@nshcore-npm/ts-oss-boiler",
-  "version": "0.0.0-development",
-  "description": "Typescript open source software project boilerplate, configured with eslint and semantic releasing.",
+  "name": "@nshcore-npm/utility-ts",
+  "version": "0.0.1",
+  "description": "A collection of helpful utilities for Typescript projects",
   "author": "nshcore@protonmail.com",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nshcore/ts-oss-boiler.git"
+    "url": "https://github.com/nshcore/utility-ts.git"
   },
-  "homepage": "https://github.com/nshcore/ts-oss-boiler#readme",
+  "homepage": "https://github.com/nshcore/utility-ts#readme",
   "bugs": {
-    "url": "https://github.com/nshcore/ts-oss-boiler/issues"
+    "url": "https://github.com/nshcore/utility-ts/issues"
   },
   "publishConfig": {
     "access": "public",
@@ -147,5 +147,10 @@
     "roots": [
       "<rootDir>/src/"
     ]
+  },
+  "dependencies": {
+    "class-validator": "^0.12.2",
+    "escape-string-regexp": "^4.0.0",
+    "rxjs": "^6.6.3"
   }
 }
