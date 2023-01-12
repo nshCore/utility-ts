@@ -149,7 +149,7 @@
     ]
   },
   "dependencies": {
-    "class-validator": "^0.12.2",
+    "class-validator": "^0.14.0",
     "escape-string-regexp": "^4.0.0",
     "rxjs": "^6.6.3"
   }
